@@ -1,0 +1,15 @@
+Dear colleague,
+ 
+Based on the success of invited sessions on the broad area of Iterative Learning Control and Repetitive Control at recent ACCs, CDCs, and last IFAC World Congress, we are organising an open invited session on iterative learning control and repetitive control at the IFAC 2020 World Congress in Berlin, July 12-17, 2020. The goal of this session is to attract researchers from different academic and industrial institutions to create similar high quality discussions and exchange of ideas that we have had in the past conferences, both from novel theoretic and application perspectives.
+ 
+An open invited session is inclusive, that is, everyone can submit a paper who is interested in the topic, please see https://www.ifac2020.org/call/open-invited-tracks/ for details. Of interest are theoretical aspects, applications, combinations thereof, as well as connections and comparisons to related (learning-based) control approaches. If you or one of your colleagues have a paper that would be appropriate for this, we would appreciate it if you submit it to this session. If you are interested, please submit your contribution to the open invited session on "Iterative Learning Control and Repetitive Control" with code 8a867. 
+ 
+Make sure to select “open invited track” when you submit the paper (otherwise the submission website will not accept it), with code 8a867. Also, if you have intentions to submit, please let us know so we have an overview of the submitted papers.
+ 
+The conference will be held in Berlin, Germany from July 12-17, 2020. Deadline for submission is October 31st, 2019 (please keep an eye on the IFAC world congress website https://www.ifac2020.org in case of extensions).
+ 
+Best Regards,
+Tom Oomen, Eindhoven University of Technology, The Netherlands
+Bing Chu, University of Southampton, UK
+Kira Barton, University of Michigan, USA
+Ying Tan, University of Melbourne, Australia

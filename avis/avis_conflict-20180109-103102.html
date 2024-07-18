@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Tom Oomen - Eindhoven University of Technology</title>
+<body>
+	<div id="header-container">
+       Tom Oomen
+    </div>
+</body>
+</head>
+<body>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+    var pageTracker = _gat._getTracker("UA-23731228-2");
+    pageTracker._trackPageview();
+} catch(err) {}</script>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Tom Oomen</div>
+<div class="menu-item"><a href="../index.html">Home</a></div>
+<div class="menu-item"><a href="../newsold.html">News</a></div>
+<div class="menu-item"><a href="../research.html">Research</a></div>
+<div class="menu-item"><a href="../students.html">Team</a></div>
+<div class="menu-item"><a href="../teaching.html">Teaching</a></div>
+<div class="menu-item"><a href="../lab.html">Lab</a></div>
+<div class="menu-category">Publications</div>
+<div class="menu-item"><a href="../publications.html#journal">Journal</a></div>
+<div class="menu-item"><a href="../publications.html#books">Books</a></div>
+<div class="menu-item"><a href="../publications.html#national">National</a></div>
+<div class="menu-item"><a href="../publications.html#conference">Conference</a></div>
+<div class="menu-item"><a href="../publications.html#miscellaneous">Miscellaneous</a></div>
+</td>
+<td id="layout-content">
+<p><br /></p>
+<h1>The AVIS setup</h1>
+<p>A very interesting setup in our lab is the Active Vibration Isolation System (AVIS). The AVIS is an industrial setup, built by <a href="http://www.ideworld.com">Integrated Dynamics Engineering</a>, and is used to isolate precision equipment from environmental disturbances. The AVIS is controlled in all six motion degrees of freedom. It is equipped with eight voicecoil actuators and six sensors. </p>
+<p><img src="avispic.jpg" height=400 align=“left” style="padding:10px;"/> 
+</p>
+<p>The sensors of the avis are geophones, which are inertial sensors that are designed to measure <i>absolute</i> velocity of the system with respect to an inertial reference frame, instead of relative to the floor. This is particularly interesting from the perspective of vibration isolation, as is explained next, see <a href="http://www.dct.tue.nl/toomen/files/VoorhoeveRieGeeOom2015.pdf">Voorhoeve <i>et al.</i>, 2015</a> for the original paper.</p>
+<div class="infoblock">
+<div class="blockcontent">
+<p>In vibration isolation, it is aimed to suppress the influence of external disturbances on the payload. These external disturbances can be separated in two classes, <img class="eq" src="eqs/3622824163579453272-130.png" alt="F_{d1}" style="vertical-align: -4px" />, acting on the floor and <img class="eq" src="eqs/3622824163580453149-130.png" alt="F_{d2}" style="vertical-align: -4px" />, acting directly on the payload, as is illustrated in the following figure.</p>
+<p><img src="avisrelative.jpg" height=200 align=“left” style="padding:10px;"/> <br>
+<i>Traditional setup, measuring the velocity relative to the floor.</i>
+</p>
+<p>In passive vibration isolation the challenge is to design suspension characteristics (modeled by a spring and damper in the above figure), such that the disturbances <img class="eq" src="eqs/3622824163579453272-130.png" alt="F_{d1}" style="vertical-align: -4px" /> and <img class="eq" src="eqs/3622824163580453149-130.png" alt="F_{d2}" style="vertical-align: -4px" /> are optimally suppressed. To suppress the floor disturbances <img class="eq" src="eqs/3622824163580453149-130.png" alt="F_{d2}" style="vertical-align: -4px" />, a soft suspension is desired since this maximizes the frequency range in which the floor and AVIS are decoupled, leading to good isolation of the AVIS with respect to floor disturbances. However, to suppress the system disturbances <img class="eq" src="eqs/3622824163579453272-130.png" alt="F_{d1}" style="vertical-align: -4px" />, a stiff suspension is desired because this minimizes the deflection caused by such a disturbance. So, there is a clear trade-off in passive vibration isolation.</p>
+<p>In active vibration isolation, the suppression of external disturbances is enhanced through active feedback control, as is illustrated in the following picture. </p>
+<p><img src="aviscontrolscheme.jpg" height=100 align=“left” style="padding:10px;"/> <br>
+<i>Simple feedback interconnection for active vibration isolation.</i>
+</p>
+<p>One possibility is to measure and actively control the velocity of the system with respect to the floor, as shown above in the traditional setup. In this configuration however, the controller can simply be interpreted as an extra suspension element between the floor and the AVIS. This means the same trade-off as in passive vibration isolation exists between the suppression of <img class="eq" src="eqs/3622824163579453272-130.png" alt="F_{d1}" style="vertical-align: -4px" /> and <img class="eq" src="eqs/3622824163580453149-130.png" alt="F_{d2}" style="vertical-align: -4px" />.</p>
+<p>If a measurement is available of the absolute velocity of the system, so-called skyhook damping can be used. The name skyhook damping references the interpretation of the controller as a suspension element (damper) between the AVIS and the fixed world or &lsquo;&lsquo;sky&rsquo;&rsquo;, the figure below. This effectively eliminates the trade-off between the suppression of floor disturbances and suppression of system disturbances, since they are both suppressed by a strong coupling between the AVIS and the (disturbance free) fixed world.</p>
+<p><img src="avisskyhook.jpg" height=200 align=“left” style="padding:10px;"/> <br>
+<i>Skyhook damping of the AVIS, using an absolute velocity measurement.</i>
+</p>
+</div></div>
+<h1>A Benchmark challenge</h1>
+<p>The AVIS system is used as a <a href="http://www.dct.tue.nl/toomen/files/VoorhoeveRieGeeOom2015.pdf">benchmark system</a> for next-generation motion control. These next-generation systems are expected to be lightweight. Consequently, these will exhibit dominant lightly damped flexible dynamics. In the future, we will actively compensate these dynamics through many actuators and sensors. In addition, a distinction will be made between measured variables and performance variables, as is explained on the <a href="../inferential/inferential.html">inferential control page</a>. As is argued in <a href="../files/OomenHerQuiWalBosSte2014.pdf">Oomen <i>et al.</i>, 2014</a>, model-based control is essential to systematically design controllers for such highly complex systems. The main challenge lies in accurately identifying the relevant models of such systems, which have very high order and large input-output dimensionality. </p>
+<p><img src="futuredesign.jpg" height=300 align=“left” style="padding:10px;"/>  </p>
+<p>The AVIS is selected as a benchmark because of its properties that are very similar to next-generation systems, albeit that those are expected to have many more inputs and outputs. An important advantage of the AVIS is that it is open-loop stable, avoiding closed-loop identification issues. In the near future, we hope to be able to provide datasets of more complex motion systems, too (see also <a href="../lab.html">lab page</a>).</p>
+<p>In the paper </p>
+<ul>
+<li><p>Identification of high-tech motion systems: An active vibration isolation benchmark [<a href="http://www.dct.tue.nl/toomen/files/VoorhoeveRieGeeOom2015.pdf">pdf</a>]<br />
+Robbert Voorhoeve, Annemiek van Rietschoten, Egon Geerardyn, and Tom Oomen<br />
+In <i>17th IFAC Symposium on System Identification</i>, Invited paper, Beijing, China, 2015</p>
+</li>
+</ul>
+<p>two benchmark challenges are proposed</p>
+<ul>
+<li><p>the main challenge involves the parametric identification based on an estimated frequency response function (or directly to the time domain data). </p>
+</li>
+<li><p>as a sub-challenge, nonparametric identification of frequency response functions is considered. The key challenge lies in identifying frequency response functions while maintaining comparable model quality, e.g., using local parametric modeling techniques to mitigate the effects of transients.</p>
+</li>
+</ul>
+<p>The details of the benchmark problems are described in the above paper, on the dedicated <a href="https://www.kth.se/social/group/system-identificatio/page/17th-ifac-symposium-on-system-identifica/">SYSID website</a>, and on the <a href="http://tc.ifac-control.org/1/1">IFAC TC website</a>.</p>
+<h2>Matlab files</h2>
+<p>We provide both the raw data, the matlab files to process them, and the processed results. The latter include the BLA, variance estimates, etc. Note that the raw data is quite large, so we recommend to download the matlab files and processed results first.</p>
+<h1>Multisine data - robust method</h1>
+<p>The following files are available in the folder <b>Robust_method</b></p>
+<p>The processed file <b>Results_Robust_Identification.mat</b> contains</p>
+<ul>
+<li><p>G_BLA: an FRD object containing the best linear approximation (equation (16) in the paper)</p>
+</li>
+<li><p>G_BLA_noise_var: the noise variance (equation (20))</p>
+</li>
+<li><p>var_s: the variance due to stochastic nonlinearities (the difference between (19) and (20))</p>
+</li>
+</ul>
+<p>The file <b>CreatePlotAVIS_RM</b> generates the plots for inspection.</p>
+<p>To generate these files yourself, you need the file <b>Process_data_BLA_RM_v5.m</b>, which generates the results in <b>Results_Robust_Identification.mat</b>. To do this, you need the folder <b>Data_robust</b>.</p>
+<p>All data sets can be found </p>
+<ul>
+<li><p>OLD location: <a href="http://www.dct.tue.nl/toomen/avis/benchmark">here.</a></p>
+</li>
+<li><p>NEW website: <a href="http://dx.doi.org/10.4121/uuid:494e738d-e2aa-49e4-b076-ac96d3a142e8">here.</a></p>
+</li>
+</ul>
+<p>Remark: at present the raw data is not yet uploaded due to size issues. These will be uploaded soon. In the meantime, please send me an email if you want access, and we will provide the files.</p>
+<h2>Comments, questions, requests, &hellip;</h2>
+<p>If you have any comments, questions, requests, ideas, suggestions, etc., please do not hesitate to contact us! </p>
+<h2>Relevant publications</h2>
+<ul>
+<li><p>Identification of high-tech motion systems: An active vibration isolation benchmark [<a href="http://www.dct.tue.nl/toomen/files/VoorhoeveRieGeeOom2015.pdf">pdf</a>]<br />
+Robbert Voorhoeve, Annemiek van Rietschoten, Egon Geerardyn, and Tom Oomen<br />
+In <i>17th IFAC Symposium on System Identification</i>, Invited paper, Beijing, China, 2015</p>
+</li>
+</ul>
+<ul>
+<li><p><a href="http://dx.doi.org/10.1109/TCST.2014.2303047">Iterative Data-Driven H infinity-Norm Estimation of Multivariable Systems with Application to Robust Active Vibration Isolation</a> [<a href="http://www.dct.tue.nl/toomen/files/OomenMaaRojHja2014preprint.pdf">preprint</a>|<a href="http://dx.doi.org/10.1109/TCST.2014.2303047">link</a>]<br />
+Tom Oomen, Rick van der Maas, Cristian R. Rojas, and H&aringkan Hjalmarsson<br />
+<i>IEEE Transactions on Control Systems Technology</i>, 22(6): 2247-2260, 2014</p>
+</li>
+</ul>
+<ul>
+<li><p><a href="http://www.dct.tue.nl/toomen/files/GeerardynOomSch2014f.pdf">Estimating the H-infinity gain of an active vibration isolation system using local rational models</a> [<a href="http://www.dct.tue.nl/toomen/files/GeerardynOomSch2014f.pdf">pdf</a>]<br />
+Egon Geerardyn, Tom Oomen, and Johan Schoukens<br />
+In <i>International Conference on Noise and Vibration Analysis</i>, 161-172, Leuven, Belgium, 2014</p>
+</li>
+</ul>
+<ul>
+<li><p><a href="http://www.dct.tue.nl/toomen/files/GeerardynOomSch2014c.pdf">Enhancing <img class="eq" src="eqs/106372733953467055-130.png" alt="mathcal{H}_infty" style="vertical-align: -4px" /> norm estimation using local LPM<img class="eq" src="eqs/6016018094-130.png" alt="/" style="vertical-align: -5px" />LRM modeling: Applied to an AVIS</a> [<a href="http://www.dct.tue.nl/toomen/files/GeerardynOomSch2014c.pdf">pdf</a>]<br />
+Egon Geerardyn, Tom Oomen, and Johan Schoukens<br />
+In <i>Proceedings of the IFAC 19th Triennial World Congress</i>, 10856-10861, Cape Town, South Africa, 2014 </p>
+</li>
+</ul>
+<ul>
+<li><p><a href="http://www.dct.tue.nl/toomen/files/MaasOom2014.pdf">Robust active vibration isolation: A multivariable data-driven approach</a> [<a href="http://www.dct.tue.nl/toomen/files/MaasOom2014.pdf">pdf</a>]<br />
+Rick van der Maas and Tom Oomen <br />
+In <i>Proceedings of the IFAC 19th Triennial World Congress</i>, 4754-4759, Cape Town, South Africa, 2014 </p>
+</li>
+</ul>
+<ul>
+<li><p><a href="http://www.dct.tue.nl/toomen/files/OomenMaaRojHja2013.pdf">Iteratively learning the <img class="eq" src="eqs/106372733953467055-130.png" alt="mathcal{H}_infty" style="vertical-align: -4px" /> norm of multivariable systems applied to model-error-modeling of a vibration isolation system</a> [<a href="http://www.dct.tue.nl/toomen/files/OomenMaaRojHja2013.pdf">pdf</a>]<br />
+Tom Oomen, Rick van der Maas, Cristian R. Rojas, and H&aringkan Hjalmarsson<br />
+In <i>Proceedings of the 2013 American Control Conference</i>, 6718-6723, Invited Paper, Washington, DC, United States, 2013</p>
+</li>
+</ul>
+<h2>Acknowledgement</h2>
+<p>This benchmark setup was set up with Robbert Voorhoeve, Annemiek van Rietschoten, and Egon Geerardyn. We want to thank H&aringkan Hjalmarsson for stimulating us for doing so and inviting us to the invited session at the <a href="http://sysid2015.info">17th IFAC Symposium on System Identification, SYSID 2015</a>. Finally, Maarten Steinbuch and Johan Schoukens are gratefully acknowledged for sharing their insight on high-tech motion systems and frequency domain system identification, respectively. </p>
+</td>
+</tr>
+</table>
+</body>
+</html>
